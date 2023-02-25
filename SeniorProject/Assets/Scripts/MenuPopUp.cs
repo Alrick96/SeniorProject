@@ -8,32 +8,34 @@ public class MenuPopUp : MonoBehaviour
 {
     public GameObject SetScreen;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     public void ButtonClicked(){
 
-        if (SetScreen.activeInHierarchy == false)
+        //if (SetScreen.activeInHierarchy == false)
+        //{
+
+        //    SetScreen.SetActive(true);
+
+        //}
+        //else {
+
+        //    SetScreen.SetActive(false);
+
+        //}
+
+        if (SetScreen.activeInHierarchy == true)
+        {
+
+            SetScreen.SetActive(false);
+
+        }
+        else
         {
 
             SetScreen.SetActive(true);
 
         }
-        else {
 
-            SetScreen.SetActive(false);
 
-        }
-    
-    
-    
     }
 }
