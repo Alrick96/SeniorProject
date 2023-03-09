@@ -16,12 +16,13 @@ public class PongBall : MonoBehaviour
     {
         resetBall();
         PongSpeedHitCount = 0;
-        //yield return new WaitForSeconds(5);
-        yield return new WaitForSeconds(0);
-        //float x = Random.Range(0, 2) == 0 ? -1 : 1;
-        //float y = Random.Range(0, 2) == 0 ? -1 : 1;
-        float x = Random.Range(0, 2) == 0 ? 1 : 1;
+        yield return new WaitForSeconds(1);
+        //yield return new WaitForSeconds(0);
+        float x = Random.Range(0, 2) == 0 ? -1 : 1;
         float y = Random.Range(0, 2) == 0 ? -1 : 1;
+        // AI Testing
+        //float x = Random.Range(0, 2) == 0 ? 1 : 1;
+        //float y = Random.Range(0, 2) == 0 ? -1 : 1;
 
         BallSpeed(new Vector3(PongBallLaunchSpeed * x, PongBallLaunchSpeed * y, 0));
 
