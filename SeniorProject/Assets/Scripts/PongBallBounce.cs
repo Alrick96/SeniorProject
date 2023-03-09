@@ -7,9 +7,6 @@ public class PongBallBounce : MonoBehaviour
     public PongBall pongBall;
     public PongScoreManager scoreManager;
     public PongPlayerController players;
-    public AudioSource playPlayerBounceSound;
-    public AudioSource playOtherBounceSound;
-    public AudioSource playScoreBounceSound;
 
     private void Bounce(Collision collision)
     {
@@ -29,23 +26,19 @@ public class PongBallBounce : MonoBehaviour
 
         float posY = (ballPos.y - playerPos.y) / playerHeight;
 
-        //playBounceSound.Play();
         pongBall.PongHitCounter();
         pongBall.BallSpeed(new Vector3(posX, posY, 0));
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-
-        if (collision.gameObject.tag == "Player")
+        if(collision.gameObject.tag == "Player")
         {
-            playPlayerBounceSound.Play();
             Bounce(collision);
         }
 
         else if(collision.gameObject.name == "LeftWall")
         {
-            playScoreBounceSound.Play();
             scoreManager.rightPlayerScored();
             if(scoreManager.gameOverScreen.activeSelf == false)
             {
@@ -55,17 +48,12 @@ public class PongBallBounce : MonoBehaviour
         }
         else if (collision.gameObject.name == "RightWall")
         {
-            playScoreBounceSound.Play();
             scoreManager.leftPlayerScored();
             if (scoreManager.gameOverScreen.activeSelf == false)
             {
                 StartCoroutine(pongBall.PongBallStart());
                 players.resetPlayer();
             }
-        }
-        else
-        {
-            playOtherBounceSound.Play();
         }
 
     }
