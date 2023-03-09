@@ -3250,13 +3250,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 11.244596, y: 0}
   m_SizeDelta: {x: 150.5, y: 8.3}
-=======
-  m_AnchoredPosition: {x: 9.689983, y: -0.00000047683716}
-  m_SizeDelta: {x: 196.293, y: 13.089}
->>>>>>> Stashed changes
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1155241797
 MonoBehaviour:
