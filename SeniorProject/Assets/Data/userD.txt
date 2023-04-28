@@ -1,6 +1,6 @@
 feather;abc;1;0.05194485;w;s;a;d;40;1000;0;;
 Man2;newthing;1.4;1;w;s;a;d;70;0;0;test;test2
-thing;thing;1;0.282788;w;s;a;d;50;1200;0;zxc;zxc
+thing;thing;1;0.282788;w;s;a;d;100;1200;0;zxc;
 menu;menu;1.187521;0.4175762;w;s;a;d;130;700;0;;
 manthing;manthing;1;0.8463117;w;s;a;d;0;900;0;;
 MM;1;1;0;w;s;a;d;260;108.3297;0;Dogs Name?;
